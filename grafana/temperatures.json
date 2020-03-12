@@ -1,0 +1,1298 @@
+{
+  "annotations": {
+    "list": [
+      {
+        "builtIn": 1,
+        "datasource": "-- Grafana --",
+        "enable": true,
+        "hide": true,
+        "iconColor": "rgba(0, 211, 255, 1)",
+        "name": "Annotations & Alerts",
+        "type": "dashboard"
+      }
+    ]
+  },
+  "editable": true,
+  "gnetId": null,
+  "graphTooltip": 1,
+  "id": 14,
+  "links": [],
+  "panels": [
+    {
+      "aliasColors": {},
+      "bars": false,
+      "dashLength": 10,
+      "dashes": false,
+      "datasource": "weather",
+      "fill": 3,
+      "fillGradient": 6,
+      "gridPos": {
+        "h": 5,
+        "w": 24,
+        "x": 0,
+        "y": 0
+      },
+      "hiddenSeries": false,
+      "id": 4,
+      "legend": {
+        "alignAsTable": false,
+        "avg": false,
+        "current": false,
+        "max": false,
+        "min": false,
+        "show": false,
+        "total": false,
+        "values": false
+      },
+      "lines": true,
+      "linewidth": 1,
+      "nullPointMode": "null",
+      "options": {
+        "dataLinks": []
+      },
+      "percentage": false,
+      "pluginVersion": "6.6.2",
+      "pointradius": 2,
+      "points": false,
+      "renderer": "flot",
+      "seriesOverrides": [],
+      "spaceLength": 10,
+      "stack": false,
+      "steppedLine": false,
+      "targets": [
+        {
+          "alias": "Temperature",
+          "groupBy": [
+            {
+              "params": [
+                "10m"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "weather",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "temperature"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "thresholds": [
+        {
+          "colorMode": "critical",
+          "fill": true,
+          "line": true,
+          "op": "gt",
+          "yaxis": "left"
+        }
+      ],
+      "timeFrom": null,
+      "timeRegions": [],
+      "timeShift": null,
+      "title": "Outdoors",
+      "tooltip": {
+        "shared": true,
+        "sort": 0,
+        "value_type": "individual"
+      },
+      "transparent": true,
+      "type": "graph",
+      "xaxis": {
+        "buckets": null,
+        "mode": "time",
+        "name": null,
+        "show": true,
+        "values": []
+      },
+      "yaxes": [
+        {
+          "decimals": null,
+          "format": "short",
+          "label": "",
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": true
+        },
+        {
+          "format": "short",
+          "label": null,
+          "logBase": 1,
+          "max": null,
+          "min": null,
+          "show": false
+        }
+      ],
+      "yaxis": {
+        "align": false,
+        "alignLevel": null
+      }
+    },
+    {
+      "backgroundColor": "rgba(128,128,128,0.1)",
+      "colorMaps": [
+        {
+          "color": "#CCC",
+          "text": "N/A"
+        },
+        {
+          "color": "#1A007B",
+          "text": "0"
+        },
+        {
+          "color": "#1C0381",
+          "text": "1"
+        },
+        {
+          "color": "#1E0888",
+          "text": "2"
+        },
+        {
+          "color": "#1F0D8E",
+          "text": "3"
+        },
+        {
+          "color": "#221295",
+          "text": "4"
+        },
+        {
+          "color": "#24179B",
+          "text": "5"
+        },
+        {
+          "color": "#271DA2",
+          "text": "6"
+        },
+        {
+          "color": "#2A23A9",
+          "text": "7"
+        },
+        {
+          "color": "#2D2AAF",
+          "text": "8"
+        },
+        {
+          "color": "#3131B6",
+          "text": "9"
+        },
+        {
+          "color": "#393CBD",
+          "text": "10"
+        },
+        {
+          "color": "#4147C3",
+          "text": "11"
+        },
+        {
+          "color": "#4953CA",
+          "text": "12"
+        },
+        {
+          "color": "#525ED0",
+          "text": "13"
+        },
+        {
+          "color": "#5B6AD7",
+          "text": "14"
+        },
+        {
+          "color": "#6577DE",
+          "text": "15"
+        },
+        {
+          "color": "#6F83E4",
+          "text": "16"
+        },
+        {
+          "color": "#798FEB",
+          "text": "17"
+        },
+        {
+          "color": "#849CF1",
+          "text": "18"
+        },
+        {
+          "color": "#8FA9F8",
+          "text": "19"
+        },
+        {
+          "color": "#9BB6FF",
+          "text": "20"
+        },
+        {
+          "color": "#92ADFC",
+          "text": "21"
+        },
+        {
+          "color": "#8AA5FA",
+          "text": "22"
+        },
+        {
+          "color": "#819DF7",
+          "text": "23"
+        },
+        {
+          "color": "#7995F5",
+          "text": "24"
+        },
+        {
+          "color": "#718DF3",
+          "text": "25"
+        },
+        {
+          "color": "#6984F0",
+          "text": "26"
+        },
+        {
+          "color": "#627CEE",
+          "text": "27"
+        },
+        {
+          "color": "#5A74EB",
+          "text": "28"
+        },
+        {
+          "color": "#536BE9",
+          "text": "29"
+        },
+        {
+          "color": "#4B63E7",
+          "text": "30"
+        },
+        {
+          "color": "#445BE4",
+          "text": "31"
+        },
+        {
+          "color": "#3D52E2",
+          "text": "32"
+        },
+        {
+          "color": "#364ADF",
+          "text": "33"
+        },
+        {
+          "color": "#2F42DD",
+          "text": "34"
+        },
+        {
+          "color": "#2939DB",
+          "text": "35"
+        },
+        {
+          "color": "#2231D8",
+          "text": "36"
+        },
+        {
+          "color": "#1C29D6",
+          "text": "37"
+        },
+        {
+          "color": "#1621D3",
+          "text": "38"
+        },
+        {
+          "color": "#0F19D1",
+          "text": "39"
+        },
+        {
+          "color": "#0911CF",
+          "text": "40"
+        },
+        {
+          "color": "#092FD0",
+          "text": "41"
+        },
+        {
+          "color": "#094FD2",
+          "text": "42"
+        },
+        {
+          "color": "#096FD4",
+          "text": "43"
+        },
+        {
+          "color": "#098FD6",
+          "text": "44"
+        },
+        {
+          "color": "#09B1D8",
+          "text": "45"
+        },
+        {
+          "color": "#09D3DA",
+          "text": "46"
+        },
+        {
+          "color": "#09DCC2",
+          "text": "47"
+        },
+        {
+          "color": "#09DEA3",
+          "text": "48"
+        },
+        {
+          "color": "#09E083",
+          "text": "49"
+        },
+        {
+          "color": "#09E263",
+          "text": "50"
+        },
+        {
+          "color": "#09E341",
+          "text": "51"
+        },
+        {
+          "color": "#08E520",
+          "text": "52"
+        },
+        {
+          "color": "#14E708",
+          "text": "53"
+        },
+        {
+          "color": "#36E908",
+          "text": "54"
+        },
+        {
+          "color": "#5AEB08",
+          "text": "55"
+        },
+        {
+          "color": "#7EED08",
+          "text": "56"
+        },
+        {
+          "color": "#A3EF08",
+          "text": "57"
+        },
+        {
+          "color": "#C8F108",
+          "text": "58"
+        },
+        {
+          "color": "#EEF308",
+          "text": "59"
+        },
+        {
+          "color": "#F5D408",
+          "text": "60"
+        },
+        {
+          "color": "#F4CD07",
+          "text": "61"
+        },
+        {
+          "color": "#F4C507",
+          "text": "62"
+        },
+        {
+          "color": "#F4BD06",
+          "text": "63"
+        },
+        {
+          "color": "#F4B506",
+          "text": "64"
+        },
+        {
+          "color": "#F4AD05",
+          "text": "65"
+        },
+        {
+          "color": "#F4A505",
+          "text": "66"
+        },
+        {
+          "color": "#F49D05",
+          "text": "67"
+        },
+        {
+          "color": "#F49504",
+          "text": "68"
+        },
+        {
+          "color": "#F48D04",
+          "text": "69"
+        },
+        {
+          "color": "#F48403",
+          "text": "70"
+        },
+        {
+          "color": "#F37C03",
+          "text": "71"
+        },
+        {
+          "color": "#F37403",
+          "text": "72"
+        },
+        {
+          "color": "#F36C02",
+          "text": "73"
+        },
+        {
+          "color": "#F36402",
+          "text": "74"
+        },
+        {
+          "color": "#F35C01",
+          "text": "75"
+        },
+        {
+          "color": "#F35401",
+          "text": "76"
+        },
+        {
+          "color": "#F34B01",
+          "text": "77"
+        },
+        {
+          "color": "#F34300",
+          "text": "78"
+        },
+        {
+          "color": "#F33B00",
+          "text": "79"
+        },
+        {
+          "color": "#F23300",
+          "text": "80"
+        },
+        {
+          "color": "#EC2F00",
+          "text": "81"
+        },
+        {
+          "color": "#E62B00",
+          "text": "82"
+        },
+        {
+          "color": "#DF2700",
+          "text": "83"
+        },
+        {
+          "color": "#D92400",
+          "text": "84"
+        },
+        {
+          "color": "#D22100",
+          "text": "85"
+        },
+        {
+          "color": "#CC1E00",
+          "text": "86"
+        },
+        {
+          "color": "#C51A00",
+          "text": "87"
+        },
+        {
+          "color": "#BF1800",
+          "text": "88"
+        },
+        {
+          "color": "#B81500",
+          "text": "89"
+        },
+        {
+          "color": "#B21200",
+          "text": "90"
+        },
+        {
+          "color": "#AC1000",
+          "text": "91"
+        },
+        {
+          "color": "#A50D00",
+          "text": "92"
+        },
+        {
+          "color": "#9F0B00",
+          "text": "93"
+        },
+        {
+          "color": "#980900",
+          "text": "94"
+        },
+        {
+          "color": "#920700",
+          "text": "95"
+        },
+        {
+          "color": "#8B0500",
+          "text": "96"
+        },
+        {
+          "color": "#850400",
+          "text": "97"
+        },
+        {
+          "color": "#7E0200",
+          "text": "98"
+        },
+        {
+          "color": "#780100",
+          "text": "99"
+        },
+        {
+          "color": "#720000",
+          "text": "100"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "datasource": "weather",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 2,
+        "w": 24,
+        "x": 0,
+        "y": 5
+      },
+      "highlightOnMouseover": true,
+      "id": 5,
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "metricNameColor": "#000000",
+      "options": {},
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "rowHeight": 30,
+      "showDistinctCount": false,
+      "showLegend": false,
+      "showLegendNames": true,
+      "showLegendPercent": false,
+      "showLegendTime": true,
+      "showLegendValues": true,
+      "showTimeAxis": false,
+      "showTransitionCount": false,
+      "targets": [
+        {
+          "alias": "",
+          "groupBy": [
+            {
+              "params": [
+                "$__interval"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "groupName"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "deviceName"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "weather",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT round(last(\"value\")) FROM \"temperature\" WHERE $timeFilter GROUP BY time($__interval), \"groupName\", \"deviceName\" fill(previous)",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "temperature"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "mean"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "textSize": 10,
+      "textSizeTime": 10,
+      "timeFrom": null,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeShift": null,
+      "timeTextColor": "#d8d9da",
+      "title": "",
+      "transparent": true,
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "#000000",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": false
+    },
+    {
+      "backgroundColor": "rgba(128,128,128,0.1)",
+      "colorMaps": [
+        {
+          "color": "#CCC",
+          "text": "N/A"
+        },
+        {
+          "color": "#1A007B",
+          "text": "0"
+        },
+        {
+          "color": "#1C0381",
+          "text": "1"
+        },
+        {
+          "color": "#1E0888",
+          "text": "2"
+        },
+        {
+          "color": "#1F0D8E",
+          "text": "3"
+        },
+        {
+          "color": "#221295",
+          "text": "4"
+        },
+        {
+          "color": "#24179B",
+          "text": "5"
+        },
+        {
+          "color": "#271DA2",
+          "text": "6"
+        },
+        {
+          "color": "#2A23A9",
+          "text": "7"
+        },
+        {
+          "color": "#2D2AAF",
+          "text": "8"
+        },
+        {
+          "color": "#3131B6",
+          "text": "9"
+        },
+        {
+          "color": "#393CBD",
+          "text": "10"
+        },
+        {
+          "color": "#4147C3",
+          "text": "11"
+        },
+        {
+          "color": "#4953CA",
+          "text": "12"
+        },
+        {
+          "color": "#525ED0",
+          "text": "13"
+        },
+        {
+          "color": "#5B6AD7",
+          "text": "14"
+        },
+        {
+          "color": "#6577DE",
+          "text": "15"
+        },
+        {
+          "color": "#6F83E4",
+          "text": "16"
+        },
+        {
+          "color": "#798FEB",
+          "text": "17"
+        },
+        {
+          "color": "#849CF1",
+          "text": "18"
+        },
+        {
+          "color": "#8FA9F8",
+          "text": "19"
+        },
+        {
+          "color": "#9BB6FF",
+          "text": "20"
+        },
+        {
+          "color": "#92ADFC",
+          "text": "21"
+        },
+        {
+          "color": "#8AA5FA",
+          "text": "22"
+        },
+        {
+          "color": "#819DF7",
+          "text": "23"
+        },
+        {
+          "color": "#7995F5",
+          "text": "24"
+        },
+        {
+          "color": "#718DF3",
+          "text": "25"
+        },
+        {
+          "color": "#6984F0",
+          "text": "26"
+        },
+        {
+          "color": "#627CEE",
+          "text": "27"
+        },
+        {
+          "color": "#5A74EB",
+          "text": "28"
+        },
+        {
+          "color": "#536BE9",
+          "text": "29"
+        },
+        {
+          "color": "#4B63E7",
+          "text": "30"
+        },
+        {
+          "color": "#445BE4",
+          "text": "31"
+        },
+        {
+          "color": "#3D52E2",
+          "text": "32"
+        },
+        {
+          "color": "#364ADF",
+          "text": "33"
+        },
+        {
+          "color": "#2F42DD",
+          "text": "34"
+        },
+        {
+          "color": "#2939DB",
+          "text": "35"
+        },
+        {
+          "color": "#2231D8",
+          "text": "36"
+        },
+        {
+          "color": "#1C29D6",
+          "text": "37"
+        },
+        {
+          "color": "#1621D3",
+          "text": "38"
+        },
+        {
+          "color": "#0F19D1",
+          "text": "39"
+        },
+        {
+          "color": "#0911CF",
+          "text": "40"
+        },
+        {
+          "color": "#092FD0",
+          "text": "41"
+        },
+        {
+          "color": "#094FD2",
+          "text": "42"
+        },
+        {
+          "color": "#096FD4",
+          "text": "43"
+        },
+        {
+          "color": "#098FD6",
+          "text": "44"
+        },
+        {
+          "color": "#09B1D8",
+          "text": "45"
+        },
+        {
+          "color": "#09D3DA",
+          "text": "46"
+        },
+        {
+          "color": "#09DCC2",
+          "text": "47"
+        },
+        {
+          "color": "#09DEA3",
+          "text": "48"
+        },
+        {
+          "color": "#09E083",
+          "text": "49"
+        },
+        {
+          "color": "#09E263",
+          "text": "50"
+        },
+        {
+          "color": "#09E341",
+          "text": "51"
+        },
+        {
+          "color": "#08E520",
+          "text": "52"
+        },
+        {
+          "color": "#14E708",
+          "text": "53"
+        },
+        {
+          "color": "#36E908",
+          "text": "54"
+        },
+        {
+          "color": "#5AEB08",
+          "text": "55"
+        },
+        {
+          "color": "#7EED08",
+          "text": "56"
+        },
+        {
+          "color": "#A3EF08",
+          "text": "57"
+        },
+        {
+          "color": "#C8F108",
+          "text": "58"
+        },
+        {
+          "color": "#EEF308",
+          "text": "59"
+        },
+        {
+          "color": "#F5D408",
+          "text": "60"
+        },
+        {
+          "color": "#F4CD07",
+          "text": "61"
+        },
+        {
+          "color": "#F4C507",
+          "text": "62"
+        },
+        {
+          "color": "#F4BD06",
+          "text": "63"
+        },
+        {
+          "color": "#F4B506",
+          "text": "64"
+        },
+        {
+          "color": "#F4AD05",
+          "text": "65"
+        },
+        {
+          "color": "#F4A505",
+          "text": "66"
+        },
+        {
+          "color": "#F49D05",
+          "text": "67"
+        },
+        {
+          "color": "#F49504",
+          "text": "68"
+        },
+        {
+          "color": "#F48D04",
+          "text": "69"
+        },
+        {
+          "color": "#F48403",
+          "text": "70"
+        },
+        {
+          "color": "#F37C03",
+          "text": "71"
+        },
+        {
+          "color": "#F37403",
+          "text": "72"
+        },
+        {
+          "color": "#F36C02",
+          "text": "73"
+        },
+        {
+          "color": "#F36402",
+          "text": "74"
+        },
+        {
+          "color": "#F35C01",
+          "text": "75"
+        },
+        {
+          "color": "#F35401",
+          "text": "76"
+        },
+        {
+          "color": "#F34B01",
+          "text": "77"
+        },
+        {
+          "color": "#F34300",
+          "text": "78"
+        },
+        {
+          "color": "#F33B00",
+          "text": "79"
+        },
+        {
+          "color": "#F23300",
+          "text": "80"
+        },
+        {
+          "color": "#EC2F00",
+          "text": "81"
+        },
+        {
+          "color": "#E62B00",
+          "text": "82"
+        },
+        {
+          "color": "#DF2700",
+          "text": "83"
+        },
+        {
+          "color": "#D92400",
+          "text": "84"
+        },
+        {
+          "color": "#D22100",
+          "text": "85"
+        },
+        {
+          "color": "#CC1E00",
+          "text": "86"
+        },
+        {
+          "color": "#C51A00",
+          "text": "87"
+        },
+        {
+          "color": "#BF1800",
+          "text": "88"
+        },
+        {
+          "color": "#B81500",
+          "text": "89"
+        },
+        {
+          "color": "#B21200",
+          "text": "90"
+        },
+        {
+          "color": "#AC1000",
+          "text": "91"
+        },
+        {
+          "color": "#A50D00",
+          "text": "92"
+        },
+        {
+          "color": "#9F0B00",
+          "text": "93"
+        },
+        {
+          "color": "#980900",
+          "text": "94"
+        },
+        {
+          "color": "#920700",
+          "text": "95"
+        },
+        {
+          "color": "#8B0500",
+          "text": "96"
+        },
+        {
+          "color": "#850400",
+          "text": "97"
+        },
+        {
+          "color": "#7E0200",
+          "text": "98"
+        },
+        {
+          "color": "#780100",
+          "text": "99"
+        },
+        {
+          "color": "#720000",
+          "text": "100"
+        }
+      ],
+      "crosshairColor": "#8F070C",
+      "datasource": "smartthings",
+      "display": "timeline",
+      "expandFromQueryS": 0,
+      "extendLastValue": true,
+      "gridPos": {
+        "h": 19,
+        "w": 24,
+        "x": 0,
+        "y": 7
+      },
+      "highlightOnMouseover": true,
+      "id": 2,
+      "legendSortBy": "-ms",
+      "lineColor": "rgba(0,0,0,0.1)",
+      "metricNameColor": "#000000",
+      "options": {},
+      "rangeMaps": [
+        {
+          "from": "null",
+          "text": "N/A",
+          "to": "null"
+        }
+      ],
+      "rowHeight": 25,
+      "showDistinctCount": false,
+      "showLegend": false,
+      "showLegendNames": false,
+      "showLegendPercent": false,
+      "showLegendTime": true,
+      "showLegendValues": true,
+      "showTimeAxis": false,
+      "showTransitionCount": false,
+      "targets": [
+        {
+          "alias": "$tag_groupName - $tag_deviceName",
+          "groupBy": [
+            {
+              "params": [
+                "1s"
+              ],
+              "type": "time"
+            },
+            {
+              "params": [
+                "groupName"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "deviceName"
+              ],
+              "type": "tag"
+            },
+            {
+              "params": [
+                "previous"
+              ],
+              "type": "fill"
+            }
+          ],
+          "measurement": "temperature",
+          "orderByTime": "ASC",
+          "policy": "default",
+          "query": "SELECT round(last(\"value\")) FROM \"temperature\" WHERE $timeFilter GROUP BY time($__interval), \"groupName\", \"deviceName\" fill(previous)",
+          "rawQuery": false,
+          "refId": "A",
+          "resultFormat": "time_series",
+          "select": [
+            [
+              {
+                "params": [
+                  "value"
+                ],
+                "type": "field"
+              },
+              {
+                "params": [],
+                "type": "last"
+              }
+            ]
+          ],
+          "tags": []
+        }
+      ],
+      "textSize": 10,
+      "textSizeTime": 10,
+      "timeFrom": null,
+      "timeOptions": [
+        {
+          "name": "Years",
+          "value": "years"
+        },
+        {
+          "name": "Months",
+          "value": "months"
+        },
+        {
+          "name": "Weeks",
+          "value": "weeks"
+        },
+        {
+          "name": "Days",
+          "value": "days"
+        },
+        {
+          "name": "Hours",
+          "value": "hours"
+        },
+        {
+          "name": "Minutes",
+          "value": "minutes"
+        },
+        {
+          "name": "Seconds",
+          "value": "seconds"
+        },
+        {
+          "name": "Milliseconds",
+          "value": "milliseconds"
+        }
+      ],
+      "timePrecision": {
+        "name": "Minutes",
+        "value": "minutes"
+      },
+      "timeShift": null,
+      "timeTextColor": "#d8d9da",
+      "title": "Indoors",
+      "transparent": true,
+      "type": "natel-discrete-panel",
+      "units": "short",
+      "useTimePrecision": false,
+      "valueMaps": [
+        {
+          "op": "=",
+          "text": "N/A",
+          "value": "null"
+        }
+      ],
+      "valueTextColor": "#000000",
+      "writeAllValues": false,
+      "writeLastValue": true,
+      "writeMetricNames": true
+    }
+  ],
+  "refresh": false,
+  "schemaVersion": 22,
+  "style": "dark",
+  "tags": [],
+  "templating": {
+    "list": []
+  },
+  "time": {
+    "from": "now-24h",
+    "to": "now"
+  },
+  "timepicker": {
+    "refresh_intervals": [
+      "5s",
+      "10s",
+      "30s",
+      "1m",
+      "5m",
+      "15m",
+      "30m",
+      "1h",
+      "2h",
+      "1d"
+    ]
+  },
+  "timezone": "",
+  "title": "Temperatures",
+  "uid": "iiZ5aguWz",
+  "version": 13
+}
