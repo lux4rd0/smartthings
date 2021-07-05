@@ -1,7 +1,7 @@
 /**
- * HTTP Event Logger For Loki
- * This was originally created from the Splunk logger from Brian Keifer and Jason Hamilton. I modified it to work as a Grafana Loki HTTP Event Collector
+ * HTTP Event Logger For Grafana Loki
  *
+
  * Copyright 2015 Brian Keifer
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except
@@ -12,8 +12,7 @@
  * Unless required by applicable law or agreed to in writing, software distributed under the License is distributed
  * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  * for the specific language governing permissions and limitations under the License.
- *
- * 2021-06-27 Modified the code to publish to Grafana Loki, 
+ * 
  */
 
 /**
@@ -23,15 +22,19 @@
  * Modifications from: Nic Jansma:
  *  https://github.com/nicjansma/smart-things
  *
+ * This was originally created from the Splunk logger from Brian Keifer and Jason Hamilton.
+ * I modified it to work as a Grafana Loki Event push.
+ *
  * Changes:
- *  Logs to a Grafana Loki HTTP endpoint instead of Logstash
+ * 2021-06-27 Modified the code to publish to Grafana Loki
+ * 2021-07-05 Added illuminence and tamper alerts
  */
 
 definition(
-  name: "Loki HTTP Event Logger",
+  name: "Grafana Loki Event Logger",
   namespace: "lux4rd0",
   author: "Dave Schmid",
-  description: "Log SmartThings events to a Loki HTTP Event Collector server",
+  description: "Log SmartThings events to a Grafana Loki Log Aggrigation server",
   category: "Convenience",
   iconUrl: "https://labs.lux4rd0.com/wp-content/uploads/2021/06/Grafana_Loki_Icon.png",
   iconX2Url: "https://labs.lux4rd0.com/wp-content/uploads/2021/06/Grafana_Loki_Icon.png",
