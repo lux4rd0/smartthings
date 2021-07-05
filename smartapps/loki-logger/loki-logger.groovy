@@ -1,6 +1,5 @@
 /**
  * HTTP Event Logger For Loki
- * 
  * This was originally created from the Splunk logger from Brian Keifer and Jason Hamilton. I modified it to work as a Grafana Loki HTTP Event Collector
  *
  * Copyright 2015 Brian Keifer
@@ -14,10 +13,7 @@
  * on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License
  * for the specific language governing permissions and limitations under the License.
  *
- * https://github.com/lux4rd0/smartthings/smartapps/loki-logger/
- * 
- * 2021-06-30 - Modified the Splunk/IOT code to publish to Grafana Loki
- *
+ * 2021-06-27 Modified the code to publish to Grafana Loki, 
  */
 
 /**
@@ -32,10 +28,10 @@
  */
 
 definition(
-  name: "Grafana Loki HTTP Event Logger",
+  name: "Loki HTTP Event Logger",
   namespace: "lux4rd0",
   author: "Dave Schmid",
-  description: "Log SmartThings events to a Grafana Loki HTTP Log Aggregation System",
+  description: "Log SmartThings events to a Loki HTTP Event Collector server",
   category: "Convenience",
   iconUrl: "https://labs.lux4rd0.com/wp-content/uploads/2021/06/Grafana_Loki_Icon.png",
   iconX2Url: "https://labs.lux4rd0.com/wp-content/uploads/2021/06/Grafana_Loki_Icon.png",
@@ -61,6 +57,7 @@ preferences {
   section("Log these Smoke Detectors:") {input "smokedetectors", "capability.smokeDetector", multiple: true, required: false}
   section("Log these Switch Levels:") {input "levels", "capability.switchLevel", multiple: true, required: false}
   section("Log these Switches:") {input "switches", "capability.switch", multiple: true, required: false}
+  section("Log these Tamper Alerts:") {input "tamperAlert", "capability.tamperAlert", multiple: true, required: false}
   section("Log these Temperature Sensors:") {input "temperatures", "capability.temperatureMeasurement", multiple: true, required: false}
   section("Log these Three-axis (Orientation) Sensors:") {input "threeAxis", "capability.threeAxis", multiple: true, required: false}
   section("Log these Thermostats:") {input "thermostats", "capability.thermostat", multiple: true, required: false}
@@ -122,6 +119,7 @@ def doSubscriptions() {
   subscribe(relays, "relaySwitch", relayHandler)
   subscribe(smokedetectors, "smokeDetector", smokeHandler)
   subscribe(switches, "switch", switchHandler)
+  subscribe(tamperAlerts, "tamperAlert", tamperAlertHandler)
   subscribe(temperatures, "temperature", temperatureHandler)
   subscribe(thermostats, "temperature", thermostatHandler)
   subscribe(thermostats, "heatingSetpoint", thermostatHandler)
@@ -209,7 +207,7 @@ def genericHandler(evt) {
       ],
       body: json
     ]))
-    log.debug result
+ //   log.debug result
     sendHubCommand(result);
     return result
   } else {
@@ -261,6 +259,7 @@ def presenceHandler(evt) {genericHandler(evt)}
 def relayHandler(evt) {genericHandler(evt)}
 def smokeHandler(evt) {genericHandler(evt)}
 def switchHandler(evt) {genericHandler(evt)}
+def tamperAlertHandler(evt) {genericHandler(evt)}
 def temperatureHandler(evt) {genericHandler(evt)}
 def thermostatHandler(evt) {genericHandler(evt)}
 def threeaxisHandler(evt) {genericHandler(evt)}
